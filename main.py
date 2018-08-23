@@ -30,7 +30,7 @@ def gen():
 	       b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 		   
 def get_frame():
-	camera.capture(rawCapture, format="bgr", use_video_port=True)
+    camera.capture(rawCapture, format="bgr", use_video_port=True)
     frame = rawCapture.array
     process_frame(frame)
     ret, jpeg = cv2.imencode('.jpg', frame)
