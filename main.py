@@ -21,7 +21,7 @@ app = Flask(__name__)
 @app.route('/stream')
 def stream():
     return Response(gen(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
+	    mimetype='multipart/x-mixed-replace; boundary=frame')
 
 def gen():
     while True:
